@@ -2,6 +2,7 @@ package com.example.calculadoraimc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -41,16 +42,22 @@ public class MainActivity extends AppCompatActivity {
 
         if (resultado < 18.5) {
             textResultadoTable.setText("Abaixo do peso");
+            textResultadoTable.setTextColor(Color.YELLOW);
         } else if (resultado < 25) {
             textResultadoTable.setText("Peso Normal");
+            textResultadoTable.setTextColor(Color.GREEN);
         } else if (resultado < 30) {
             textResultadoTable.setText("Sobrepeso");
+            textResultadoTable.setTextColor(Color.parseColor("#f0f059"));
         } else if (resultado < 35) {
             textResultadoTable.setText("Obesidade 1");
+            textResultadoTable.setTextColor(Color.parseColor("#ff9d00"));
         } else if (resultado < 40) {
             textResultadoTable.setText("Obesidade 2");
+            textResultadoTable.setTextColor(Color.parseColor("#ff4545"));
         } else {
             textResultadoTable.setText("Obesidade 3");
+            textResultadoTable.setTextColor(Color.RED);
         }
 
     }
